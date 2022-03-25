@@ -1,5 +1,5 @@
 .product {
-  height: 508px;
+  height: 538px;
   width: 300px;
   border: 3px solid rgba(145, 155, 163, 0.664);
   border-radius: 10px;
@@ -54,4 +54,9 @@
 }
 .btn-cart-text{
     margin-right: 10px;
+}
+
+.cart-container{
+  background-color: #FF99004D;
+;
 }
