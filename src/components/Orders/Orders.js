@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import RecheckCart from '../RecheckCart/RecheckCart';
+import './Ordders.css'
 
 const Orders = () => {
     const [products, setProducts] = useProducts();
     const [cart, setCart] = useCart(products);
+    const navigation = useNavigate();
 
     const handlRemoveItem = product =>{
         const rest = cart.filter(pd => pd.id !== product.id)
@@ -18,7 +20,7 @@ const Orders = () => {
 
     return (
         <div className='shop-container'>
-            <div className="cecheck-cart-container">
+            <div className="recheck-cart-container">
                {
                    cart.map(product => <RecheckCart
                     hey={product.key}
@@ -29,9 +31,7 @@ const Orders = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <Link to='*'>
-                        <button>Proceed Checkout</button>
-                    </Link>
+                    <button onClick={() => navigation('/*')}>Confirm Order</button>
                 </Cart>
             </div>
         </div>
