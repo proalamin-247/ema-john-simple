@@ -1,0 +1,38 @@
+.recheck-cart{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 21px;
+    width: 571px;
+    display: flex;
+}
+
+.recheck-cart-item-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.recheck-cart img{
+    width: 91px;
+}
+
+.item-details p{
+    margin: 0;
+}
+
+
+.dlt-container {
+    display: flex;
+    align-items: center;
+}
+.dlt-container .dlt-btn{
+    background-color: rgb(238, 80, 80);
+    border: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.dlt-btn{
+    color: white;
+    font-size: 17px;
+}
